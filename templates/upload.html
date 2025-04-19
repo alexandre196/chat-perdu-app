@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🐾 Reconnaissance de Chat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-100 to-purple-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-lg">
+    <h1 class="text-3xl font-bold text-indigo-600 text-center mb-6">🐾 Reconnaissance de Chat</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Sélectionnez une image</label>
+        <input type="file" name="image" accept="image/*" required
+               class="mt-1 block w-full text-sm text-gray-500
+                      file:mr-4 file:py-2 file:px-4
+                      file:rounded-full file:border-0
+                      file:text-sm file:font-semibold
+                      file:bg-indigo-50 file:text-indigo-700
+                      hover:file:bg-indigo-100"/>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Nom du chat</label>
+        <input type="text" name="name" required
+               class="mt-1 block w-full rounded-md border-gray-300 shadow-sm 
+                      focus:border-indigo-500 focus:ring-indigo-500"/>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Email propriétaire</label>
+        <input type="email" name="email" required
+               class="mt-1 block w-full rounded-md border-gray-300 shadow-sm 
+                      focus:border-indigo-500 focus:ring-indigo-500"/>
+      </div>
+      <button type="submit"
+              class="w-full py-3 bg-indigo-600 text-white font-semibold rounded-lg
+                     hover:bg-indigo-700 transition">Analyser l’image</button>
+    </form>
+    <p class="mt-6 text-center text-sm text-gray-500">
+      <a href="/enregistrer" class="text-indigo-600 hover:underline">📋 Enregistrer un nouveau chat</a>
+    </p>
+    <p class="mt-4 text-center text-xs text-gray-400">&copy; 2025 – ChatRecognitionApp</p>
+  </div>
+</body>
+</html>

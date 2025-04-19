@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Résultat de l’Analyse</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f0f0f0; }
+    .card { display: inline-block; padding: 2rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    img { max-width: 100%; border-radius: 8px; margin-top: 1rem; }
+    .btn { display: inline-block; margin-top: 1.5rem; padding: 0.5rem 1rem; background: #6c63ff; color: #fff; border-radius: 4px; text-decoration: none; }
+    .btn:hover { background: #514bd4; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🐾 Résultat de l’Analyse 🐾</h1>
+
+    {% if result == 'cats' %}
+      <p>🐱 <strong>Chat détecté !</strong></p>
+    {% else %}
+      <p>🐶 <strong>Aucun chat détecté</strong></p>
+    {% endif %}
+
+    <img src="{{ url_for('static', filename='uploads/' + image_name) }}" alt="Image analysée">
+
+    <br>
+    <a href="{{ url_for('index') }}" class="btn">🔁 Recommencer</a>
+  </div>
+</body>
+</html>
