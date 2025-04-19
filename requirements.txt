@@ -26,3 +26,4 @@ urllib3==2.3.0
 Werkzeug==2.0.1
 wrapt==1.17.2
 WTForms==3.2.1
+Pillow==9.5.0
